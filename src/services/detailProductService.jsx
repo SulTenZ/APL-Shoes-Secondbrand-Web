@@ -14,7 +14,7 @@ export const getProductDetail = async (id) => {
     // Pastikan struktur size dan label aman
     const sizes = Array.isArray(product.sizes)
       ? product.sizes.map((s) => ({
-          label: s.size?.label || "-", // aman dari null
+          label: s.size?.label || "-",
           quantity: s.quantity,
         }))
       : [];
@@ -22,8 +22,8 @@ export const getProductDetail = async (id) => {
     return {
       nama: product.nama,
       deskripsi: product.deskripsi,
-      harga: product.hargaJual, // hanya harga jual
-      sizes, // hasil map aman
+      harga: product.hargaJual,
+      sizes,
     };
   } catch (error) {
     console.error("Error saat mengambil detail produk:", error);
