@@ -1,8 +1,8 @@
 {
   "rewrites": [
     {
-      "source": "/api/product",
-      "destination": "https://apl-smartstock-backend.vercel.app//api/product"
+      "source": "/api/:path*",
+      "destination": "https://apl-smartstock-backend.vercel.app/api/:path*"
     }
   ]
 }
